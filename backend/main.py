@@ -7,7 +7,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from backend.rag_pipeline import run_rag
-from backend.transcribe import transcribe_audio
 
 
 # =========================================
@@ -179,9 +178,11 @@ async def voice_query(
 
         transcription_start = time.perf_counter()
 
+        from backend.transcribe import transcribe_audio
+
         transcription = transcribe_audio(
-            temp_path
-        )
+    temp_path
+)
 
         transcription_latency = (
             time.perf_counter()
