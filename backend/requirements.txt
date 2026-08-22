@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+datasets
+sentence-transformers
+faiss-cpu
+numpy
+pandas
+python-dotenv
+pydantic
+sarvamai
+openai
+groq
+python-multipart
